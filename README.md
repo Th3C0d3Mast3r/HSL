@@ -1,6 +1,7 @@
-![Linux](https://img.shields.io/badge/Kernel-Linux-white?logo=linux&logoColor=black)
+![Status](https://img.shields.io/badge/STATUS-WORKING-green)▪️
+![Linux](https://img.shields.io/badge/Kernel-Linux-white?logo=linux&logoColor=white)▪️
 ![Ubuntu](https://img.shields.io/badge/Preferred_OS-Ubuntu-orange?logo=ubuntu&logoColor=white)
-![Status](https://img.shields.io/badge/STATUS-WORKING-green)
+
 # Setup - Home Server
 Yes, I entered in the **zone** of making a **HOME SERVER[S]**-till now its just one, but, hoping I make a Home Lab one day ;)
 So, the current server that I am having at home is very low spec and very bare *(really bare)*
