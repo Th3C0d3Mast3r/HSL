@@ -196,8 +196,9 @@ Examples:
 
 ## 8. MAIN README RELATED INFO
 Here, some specific things must be written as:-
-- [placeholder]
-- [placeholder]
+```
+<!-- HSL_DESCRIPTOR: Short one-line description of this architecture -->
+```
 
 The above will enable one to connect with the `github-actions` and auto-sync the changes, and showing the base summary of the directories on the main README.md
 

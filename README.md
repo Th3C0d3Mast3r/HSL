@@ -25,4 +25,10 @@ Check the below diagram to understand, the current architecture. If you wish, us
 
 ## INSTRUCTIONS (SETTING UP)
 
+## Architecture Index
+
+<!-- HSL_TABLE_START -->
+Auto-generated. Do not edit manually.
+<!-- HSL_TABLE_END -->
+
 > *HSL | Created and Maintained by @Th3C0d3Mast3r and other Contributors*
