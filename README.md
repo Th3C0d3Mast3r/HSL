@@ -25,4 +25,4 @@ Check the below diagram to understand, the current architecture. If you wish, us
 
 ## INSTRUCTIONS (SETTING UP)
 
-> *Setup - Home Servers | Created and Maintained by @Th3C0d3Mast3r and other Contributors*
+> *HSL | Created and Maintained by @Th3C0d3Mast3r and other Contributors*
