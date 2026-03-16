@@ -15,7 +15,7 @@ Each directory in this repository would represent a **complete, documented archi
 
 ---
 
-# ARCHITECTURE INDEX
+## ARCHITECTURE INDEX
 
 <!-- HSL_TABLE_START -->
 Auto-generated. Do not edit manually.
@@ -27,7 +27,7 @@ Each entry links directly to the directory containing its full documentation.
 
 ---
 
-# HOW TO NAVIGATE THIS REPO
+## HOW TO NAVIGATE THIS REPO
 
 - The repository is structured around **architecture directories**.
 - Each directory represents **one unique setup**.
@@ -56,7 +56,7 @@ Inside every directory you will find a `README.md` explaining:
 
 ---
 
-# DIRECTORY NAMING CONVENTION
+## DIRECTORY NAMING CONVENTION
 
 Directories follow a simple naming system to indicate the type of setup.
 
@@ -75,7 +75,7 @@ These are typically used for **learning, experimentation, and development** to e
 
 ---
 
-# CONTRIBUTING
+## CONTRIBUTING
 
 Contributions are highly welcome *(the whole thing is based off-of devs who wish to share their home-servers and home-labs and make this community goated)*
 
@@ -93,14 +93,14 @@ The contribution guide explains:
 
 ---
 
-# LICENSE
+## LICENSE
 This repository follows the license specified in the `LICENSE` file.
 
 Please respect the license terms when using or redistributing content from this project.
 
 ---
 
-# THE COMMUNITY
+## THE COMMUNITY
 HSL is a **community-driven project**.
 
 The strength of this repository comes from contributors who share their knowledge, setups, and experiments with others.
