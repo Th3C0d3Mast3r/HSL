@@ -23,8 +23,8 @@ To maintain consistency and clarity across the repository, please follow these g
 
 ## 2. Directory Naming Convention
 All architectures must follow the naming structure below:
-- **HS_<name>** → Home Servers  
-- **HL_<name>** → Home Labs  
+- **HS_name** → Home Servers  
+- **HL_name** → Home Labs  
 
 And the `<name>` must be in Camel-Case
 
