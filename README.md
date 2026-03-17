@@ -19,7 +19,11 @@ Each directory in this repository would represent a **complete, documented archi
 ## ARCHITECTURE INDEX
 
 <!-- HSL_TABLE_START -->
-Auto-generated. Do not edit manually.
+
+| Directory | Description | Link |
+|-----------|-------------|------|
+| HS_tailscaleNextcloud | A Simple Samba+Tailscale+NextCloud based on-demand home server | [Open](./HS_tailscaleNextcloud) |
+
 <!-- HSL_TABLE_END -->
 
 The table above is **automatically generated** by CI and lists all available architectures in the repository.
