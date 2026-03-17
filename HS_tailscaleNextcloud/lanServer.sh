@@ -12,8 +12,8 @@ if [ "$EUID" -ne 0 ]; then
   exit 1
 fi
 
-USER_NAME="oobantu"
-SAMBA_ROOT="/home/oobantu/samba"
+USER_NAME="thisIsTheUserName"
+SAMBA_ROOT="/home/thisIsTheUserName/samba"
 SMB_CONF="/etc/samba/smb.conf"
 
 # ---- Install Samba if missing ----
