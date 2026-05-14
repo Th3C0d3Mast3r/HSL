@@ -1,0 +1,21 @@
+name: "Security Scan (GitCheck)"
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  security-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Required: GitCheck needs history to analyze the diff
+
+      - name: GitCheck Security Scan
+        uses: Th3C0d3Mast3r/gitcheck@main # Use a specific tag like @v1.0 for stability - refer to my repo tags
+        with:
+          report_mode: '1' # Options: 1 (Always), 2 (Skip Merges), 3 (Never)
