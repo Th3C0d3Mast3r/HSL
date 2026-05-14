@@ -27,3 +27,5 @@ jobs:
           git add README.md
           git commit -m "auto: update architecture table" || echo "No changes"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
