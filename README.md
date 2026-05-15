@@ -1,4 +1,4 @@
-![Static Badge](https://img.shields.io/badge/LICENSE-MIT-blue) ![Static Badge](https://img.shields.io/badge/REVIEW-Weekly-white)
+![Static Badge](https://img.shields.io/badge/LICENSE-MIT-blue) ![Static Badge](https://img.shields.io/badge/REVIEW-Weekly-white) [![Security Analysis](https://github.com/Th3C0d3Mast3r/HSL/actions/workflows/git-check.yaml/badge.svg)](https://github.com/Th3C0d3Mast3r/HSL/actions/workflows/git-check.yaml)
 # HSL — Home Server & Lab
 
 **HSL (Home Server & Lab)** is a curated collection of **practical home server and home lab architectures** designed to make self-hosting accessible, understandable, and reproducible.
