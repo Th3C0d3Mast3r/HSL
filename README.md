@@ -22,6 +22,7 @@ Each directory in this repository would represent a **complete, documented archi
 
 | Directory | Description | Link |
 |-----------|-------------|------|
+| HL_TethysSystem | Geo Distributed Inference and Storage Topology [HARD] | [Open](./HL_TethysSystem) |
 | HS_tailscaleNextcloud | A Simple Samba+Tailscale+NextCloud based on-demand home server | [Open](./HS_tailscaleNextcloud) |
 
 <!-- HSL_TABLE_END -->
