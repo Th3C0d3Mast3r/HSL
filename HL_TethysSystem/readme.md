@@ -2,6 +2,8 @@
 
 A two-site, active-active homelab spanning a Proxmox x86_64 storage appliance (Site A) and a 5-node Apple Silicon compute cluster (Site B), stitched together through an Oracle Cloud free-tier ARM64 reverse proxy acting as the single public-internet ingress point. Inter-site traffic rides a Tailscale overlay routed through WireGuard tunnels, with the OCI node advertising the Site A LAN subnet so remote peers can reach internal storage and service endpoints without exposing them directly. RBAC is enforced at the Tailscale ACL layer, mapping authenticated identities to specific storage volumes on Site A and specific inference API ports on Site B.
 
+<!-- HSL_DESCRIPTOR: Geo Distributed Inference and Storage Topology [HARD] -->
+
 ---
 
 ![OS](https://img.shields.io/badge/OS-Proxmox%20%7C%20macOS%20%7C%20Ubuntu-orange)
