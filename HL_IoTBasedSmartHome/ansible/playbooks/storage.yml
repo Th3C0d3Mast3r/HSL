@@ -1,0 +1,6 @@
+---   # this shi tells, that the current is a YAML file, and it starts from here (below is the content u gotta know)
+- name: Storage initialization playbook
+  hosts: all
+  become: true
+  roles:
+    - storage

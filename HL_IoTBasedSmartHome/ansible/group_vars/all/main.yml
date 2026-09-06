@@ -1,0 +1,13 @@
+# this is where I am defining the storages, and all the groups and stuff
+target_user: "{{ ansible_env.SUDO_USER | default(ansible_user_id) }}"
+
+
+# and these are the paths taht need to be created on the machine
+# NOTE: THis should be same as that you woudl define in the .env.example file
+data_root: "/srv/homelab/appdata"
+storage_directories:
+  - "/srv/homelab/appdata"
+  - "/mnt/storage/media"
+  - "/mnt/storage/nextcloud"
+  - "/mnt/storage/cameras"
+  - "/mnt/storage/backups"

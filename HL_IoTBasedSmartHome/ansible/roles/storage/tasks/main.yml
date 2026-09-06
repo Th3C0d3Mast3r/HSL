@@ -1,0 +1,12 @@
+---
+- name: Ensure Storage heirarchy exists
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    owner: "{{ target_user }}"
+    group: "{{ target_user }}"
+    mode: '0755'
+  loop: "{{ storage_directories }}"
+
+# so, the above storage_directories is what is taken reference from group_vars/all/main.yml file
+# THis is how Ansible basically works, it takes the variables from the group_vars/all/main.yml file and then uses them in the tasks/main.yml file to create the directories with the specified owner, group, and permissions.
