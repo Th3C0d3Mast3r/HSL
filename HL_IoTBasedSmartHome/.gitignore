@@ -1,0 +1,39 @@
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Secrets
+secrets/*
+!secrets/.gitkeep
+
+# Ansible
+*.retry
+.vault-password
+vault-password.txt
+
+# SSH
+*.pem
+*.key
+*.pub
+
+# Docker persistent data
+**/data/
+**/logs/
+**/database/
+**/config/
+
+# Application state
+docker/**/config/
+docker/**/cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
