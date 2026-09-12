@@ -1,0 +1,51 @@
+name: homelab-monitoring
+
+networks:
+  homelab-network:
+    external: true
+
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    container-name: homelab-Prometheus
+    restart: unless-stopped
+    ports:
+      - 9090:9090
+    volumes:
+      - ../configs/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ${DATA_ROOT}/prometheus:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    networks:
+      - homelab-network
+
+
+
+  node-exporter:
+    image: prom/node-exporter:latest
+    container-name: homelab-NodeExporter
+    restart: unless-stopped
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.sysfs=/host/sys'
+      - '--path.rootfs=/rootfs'
+    networks:
+      - homelab-network
+  
+  grafana:
+    image: grafana/grafana:latest
+    container-name: homelab-Grafana
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD:-admin}
+    volumes:
+      - ${DATA_ROOT}/grafana:/var/lib/grafana
+    networks:
+      - homelab-network

@@ -1,0 +1,28 @@
+name: homelab-utilities
+
+networks:
+  homelab-network:
+    external: true
+
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma:1
+    container_name: uptime-kuma
+    restart: unless-stopped
+    ports:
+      - "${UPTIME_KUMA_PORT:-3001}:3001"
+    volumes:
+      - ${DATA_ROOT}/uptime-kuma:/app/data
+    networks:
+      - homelab-network
+
+  dozzle:
+    image: amir20/dozzle:latest
+    container_name: dozzle
+    restart: unless-stopped
+    ports:
+      - "${DOZZLE_PORT:-8888}:8888"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - homelab-network

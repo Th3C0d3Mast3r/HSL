@@ -1,0 +1,20 @@
+name: homelab-media
+
+networks: 
+  homelab-network:
+    external: true
+
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container-name: homelab-Jellyfin
+    restart: unless-stopped
+    user: ${PUID}:${PGID}
+    ports:
+      - 8096:8096
+    volumes:
+      - ${DATA_ROOT}/jellyfin/config:/config
+      - ${DATA_ROOT}/jellyfin/cache:/cache
+      - ${MEDIA_ROOT}:/media:ro
+    networks:
+      - homelab-network

@@ -1,0 +1,14 @@
+---
+- name: Ensure cron package is installed
+  ansible.builtin.apt:
+    name: cron
+    state: present
+
+- name: Schedule daily homelab appdata backup cron job
+  ansible.builtin.cron:
+    name: "Homelab Daily AppData Backup"
+    minute: "0"
+    hour: "3"
+    user: "{{ target_user }}"
+    job: "/bin/bash {{ ansible_env.PWD }}/scripts/backup.sh > /dev/null 2>&1"
+

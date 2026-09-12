@@ -1,0 +1,47 @@
+---
+- name: Install Samba packages
+  ansible.builtin.apt:
+    name:
+      - samba
+      - samba-common-bin
+    state: present
+    update_cache: yes
+
+- name: Create Samba share directories
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    owner: "{{ target_user }}"
+    group: "{{ target_user }}"
+    mode: '0775'
+  loop:
+    - "{{ storage_directories[1] }}/photos"
+    - "{{ storage_directories[1] }}/videos"
+
+- name: Configure Samba shares in smb.conf
+  ansible.builtin.blockinfile:
+    path: /etc/samba/smb.conf
+    block: |
+      [photos]
+         path = {{ storage_directories[1] }}/photos
+         browseable = yes
+         writable = yes
+         valid users = {{ target_user }}
+         create mask = 0664
+         directory mask = 0775
+
+      [videos]
+         path = {{ storage_directories[1] }}/videos
+         browseable = yes
+         writable = yes
+         valid users = {{ target_user }}
+         create mask = 0664
+         directory mask = 0775
+    marker: "# {mark} ANSIBLE MANAGED SAMBA SHARES"
+  notify: Restart samba
+
+- name: Ensure Samba service is active and enabled
+  ansible.builtin.systemd:
+    name: smbd
+    state: started
+    enabled: yes

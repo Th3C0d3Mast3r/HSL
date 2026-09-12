@@ -1,0 +1,31 @@
+name: homelab-logging
+
+networks:
+  homelab-network:
+    external: true
+
+services:
+  loki:
+    image: grafana/loki:2.9.4
+    container_name: homelab-Loki
+    restart: unless-stopped
+    ports:
+      - "3100:3100"
+    command: -config.file=/etc/loki/loki-config.yaml
+    volumes:
+      - ../configs/loki/loki-config.yaml:/etc/loki/loki-config.yaml:ro
+      - ${DATA_ROOT}/loki:/tmp/loki
+    networks:
+      - homelab-network
+
+  promtail:
+    image: grafana/promtail:2.9.4
+    container_name: homelab-Promtail
+    restart: unless-stopped
+    command: -config.file=/etc/promtail/promtail-config.yaml
+    volumes:
+      - ../configs/promtail/promtail-config.yaml:/etc/promtail/promtail-config.yaml:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+    networks:
+      - homelab-network

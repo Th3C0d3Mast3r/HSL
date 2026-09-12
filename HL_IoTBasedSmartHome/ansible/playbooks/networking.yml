@@ -1,0 +1,8 @@
+---
+- name: Host Networking and File Services
+  hosts: all
+  become: true
+  roles:
+    - firewall
+    - tailscale
+    - samba

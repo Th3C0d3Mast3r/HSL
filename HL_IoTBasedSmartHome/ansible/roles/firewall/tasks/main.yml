@@ -1,0 +1,31 @@
+---
+- name: Install UFW firewall
+  ansible.builtin.apt:
+    name: ufw
+    state: present
+
+- name: Allow SSH port
+  ansible.builtin.ufw:
+    rule: allow
+    port: '22'
+    proto: tcp
+
+- name: Allow HTTP port
+  ansible.builtin.ufw:
+    rule: allow
+    port: '80'
+    proto: tcp
+
+- name: Allow Samba ports
+  ansible.builtin.ufw:
+    rule: allow
+    port: "{{ item }}"
+    proto: tcp
+  loop:
+    - '139'
+    - '445'
+
+- name: Enable UFW firewall safely
+  ansible.builtin.ufw:
+    state: enabled
+    policy: deny

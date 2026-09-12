@@ -1,0 +1,6 @@
+name: homelab-base
+
+networks:
+  homelab-network:
+    name: homelab-network
+    driver: bridge
