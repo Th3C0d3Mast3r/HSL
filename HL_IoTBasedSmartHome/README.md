@@ -1,4 +1,8 @@
+![Static Badge](https://img.shields.io/badge/Preferred_OS-Ubuntu-orange?logo=ubuntu) ![Static Badge](https://img.shields.io/badge/Technology-Docker-blue?logo=docker) ![Static Badge](https://img.shields.io/badge/Technology-Ansible-white?logo=ansible) 
 # HL_IoTBasedSmartHome
+
+<!-- HSL_DESCRIPTOR: Modular IoT-based home server with telemetry, MQTT, media, and automation -->
+
 This is the `v2` that I am making for my Home. The main aim of this is that, I can use the Server, along with my Pi  Zero *(the PI Hole for the LAN)*; and along with that, the server will be running things that would be modular- so, user can customize what all he wants to have on the server *(and if, in future reqs change, can add on more things!)*
 
 So, this HL will have the following things *(along with some more, which I will add as I make and refine this)*.
@@ -11,11 +15,14 @@ So, this HL will have the following things *(along with some more, which I will 
 - Centralized logging for all containers *(Loki + Promtail → Grafana)*
 - Automated daily backups of application data
 
+## SERVER REQUIREMENTS
+The following are the base requirements I feel could be used to suffice and run the server well *(if ur specs are bettee than this, then well, its a good news. If they are less- do let me know, if it works well or nah- cause I didn't stress test it)*
+
+
 ## ARCHITECTURE
 The following is the architecture of the current server-
 ![HL IoT-Based Smart Home Architecture](assets/HL_IoTBasedSmartHome.png)
 
----
 
 ## GETTING STARTED
 
@@ -96,3 +103,7 @@ chmod +x scripts/*.sh
 ```bash
 ./scripts/health.sh
 ```
+
+
+## SOURCES
+The following are the things that I came across when I was reading about how to make the things better for my HomeServer, and make it level up-
