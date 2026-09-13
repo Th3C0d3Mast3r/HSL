@@ -1,0 +1,9 @@
+# Home Assistant Core Configuration
+default_config:
+
+# MQTT Broker Integration
+mqtt:
+  broker: mosquitto
+  port: 1883
+  discovery: true
+  discovery_prefix: homeassistant

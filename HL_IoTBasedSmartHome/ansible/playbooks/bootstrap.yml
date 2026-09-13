@@ -1,0 +1,6 @@
+---
+- name: Host System Bootstrap Playbook
+  hosts: all
+  become: true
+  roles:
+    - common
